@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="210dp"
+
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/image" />
+
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:digits="0123456789 +"
+        android:ems="13"
+        android:hint="Enter phone"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/image"
+        android:inputType="phone"/>
+
+    <Button
+        android:id="@+id/buttonGetVerificationCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextPhone"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/common_google_signin_btn_text_dark"
+        android:background="@color/colorPrimary"
+        android:text="Get verification code"
+        android:textAllCaps="false"/>
+
+    <EditText
+        android:id="@+id/editTextCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:digits="0123456789"
+        android:hint="Enter code received"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/buttonGetVerificationCode"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/buttonSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextCode"
+        android:textColor="@color/common_google_signin_btn_text_dark"
+        android:background="@color/colorPrimary"
+        android:layout_centerHorizontal="true"
+        android:text="Sign In" />
+
+
+</RelativeLayout>
